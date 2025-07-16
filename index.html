@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Deliver - Restaurant Delivery Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row gx-4">
+
+            <nav id="sidebar" class="col-lg-3">
+                <div class="row gy-10 col mb-3" style="background-color: #ffffff;">
+                    <a class="logo" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bluesky" viewBox="0 0 20 15">
+                            <path d="M3.468 1.948C5.303 3.325 7.276 6.118 8 7.616c.725-1.498 2.698-4.29 4.532-5.668C13.855.955 16 .186 16 2.632c0 .489-.28 4.105-.444 4.692-.572 2.04-2.653 2.561-4.504 2.246 3.236.551 4.06 2.375 2.281 4.2-3.376 3.464-4.852-.87-5.23-1.98-.07-.204-.103-.3-.103-.218 0-.081-.033.014-.102.218-.379 1.11-1.855 5.444-5.231 1.98-1.778-1.825-.955-3.65 2.28-4.2-1.85.315-3.932-.205-4.503-2.246C.28 6.737 0 3.12 0 2.632 0 .186 2.145.955 3.468 1.948" />
+                        </svg>
+                        <path d="M4 16h14v2H4z" />
+                        <rect x="6" y="18" width="2" height="3" rx="1" ry="1" />
+                        <rect x="10" y="18" width="2" height="3" rx="1" ry="1" />
+                        <path d="M7 14v-4a3 3 0 0 1 6 0v4H7z" fill="#2A62FF" />
+                        <rect x="9" y="7" width="10" height="6" rx="1" ry="1" />
+                        <path d="M5 11v-4H2v4z" /></svg>
+                        Delivery
+                    </a></div>
+                <h2 style="font-family:sans-serif; font-weight: bold;">Cuisines</h2>
+                <div class="search-cuisines position-relative">
+                    <input type="text" class="form-control" placeholder="Search for cuisines..." aria-label="Search Cuisines" />
+                    <svg class="input-icon position-absolute top-50 translate-middle-y" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#bbb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="left:12px;">
+                        <circle cx="11" cy="11" r="7" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+                </div>
+                <a class="nav-link" href="#"><span class="icon">🍹</span>Beverages</a>
+                <a class="nav-link" href="#"><span class="icon">🍕</span>Pizza</a>
+                <a class="nav-link" href="#"><span class="icon">🥢</span>Chinese</a>
+                <a class="nav-link" href="#"><span class="icon">🍝</span>European</a>
+                <a class="nav-link" href="#"><span class="icon">🥐</span>French</a>
+                <a class="nav-link" href="#"><span class="icon">🍔</span>Burger</a>
+                <a class="nav-link" href="#"><span class="icon">🍢</span>Lebanese</a>
+                <a class="nav-link" href="#"><span class="icon">🌮</span>Mexican</a>
+                <a class="nav-link" href="#"><span class="icon">🥗</span>Salads</a>
+                <a class="nav-link" href="#"><span class="icon">🍜</span>Thai</a>
+            </nav>
+
+
+            <main class="col-lg-9" id="main-top">
+                <div style="background-color: #f4f4f4;">
+
+                    <div id="header-row" class="d-flex align-items-center">
+                        <div class="location-select" role="button" tabindex="0" aria-label="Select Location">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zM12 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" /></svg>
+                            Rio De Janeiro, Br
+                            <svg fill="currentColor" width="16" height="16" viewBox="0 0 24 24" style="margin-left:auto;">
+                                <path d="M7 10l5 5 5-5z" /></svg>
+                        </div>
+                        <div class="search-bar position-relative">
+                            <input class="search-input" type="search" placeholder="Search" aria-label="Search restaurants, food..." />
+                            <svg class="search-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <circle cx="11" cy="11" r="7" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+                        </div>
+                        <div class="lang-select" role="button" tabindex="0" aria-label="Select Language">
+                            Eng
+                            <svg fill="currentColor" width="12" height="12" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5z" /></svg>
+                        </div>
+                        <button class="cart-button" aria-label="View Cart" title="Cart">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                                <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z" />
+                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                            </svg>
+                        </button>
+                        <button class="login-button" type="button">Login</button>
+                    </div>
+
+                </div>
+
+
+                <nav class="breadcrumb-custom" aria-label="breadcrumb">
+                    Home / <a href="#" aria-current="page">Restaurants</a>
+                </nav>
+                <div class="row col-lg-20 mb-4 justify-content-end text-end">
+                    <div class="col-auto" style="font-weight: bold;">Cost</div>
+                    <div class="col-auto" style="font-weight: bold;">Rating</div>
+                    <div class="col-auto" style="font-weight: bold;">Cost Per Person</div>
+                    <div class=" col-auto" style="font-weight: bold;">Order Type</div>
+                </div>
+
+
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="offer-card">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/79812a1f-72ed-408f-a373-429867e1918f.png" alt="Plate with spicy Thai salad containing lettuce, red chili slices, and peanuts on a dark rustic wooden background" onerror="this.style.display='none'" />
+                            <div class="offer-text">50% off</div>
+                            <div class="offer-badge">OFFER</div>
+
+
+                            <div class="offer-subtext">Exclusive Offer On All Cuisines<br />ALBERTSONS</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="offer-card">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c5f8660b-e0a9-4057-a2d7-8fe8db2b01d0.png" alt="Bowl of Asian noodles with bean sprouts, herbs, and chopsticks on a dark textured surface" onerror="this.style.display='none'" />
+
+                            <div class="offer-text">50% off</div>
+                            <div class="offer-badge">OFFER</div>
+                            <div class="offer-subtext">Exclusive Offer On All Cuisines<br />ALBERTSONS</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-lg-block d-none">
+                        <div class="offer-card">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8efe75c9-f180-4308-81b3-d7be70c90e71.png" alt="Rice bowl topped with grilled chicken, herbs, and vegetables on a wooden board" onerror="this.style.display='none'" />
+
+                            <div class="offer-text">50% off</div>
+                            <div class="offer-badge">OFFER</div>
+                            <div class="offer-subtext">Exclusive Offer On All Cuisines<br />ALBERTSONS</div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <h5 class="mb-3">Recommended Restaurants</h5>
+                <div class="row g-3">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="restaurant-card" role="button" tabindex="0" aria-label="Food Zone restaurant card">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/68ac50c0-099e-4761-8c9f-a31f51dca66a.png" alt="Food zone restaurant dish with grilled meat and fresh cucumber slices in a white plate" onerror="this.style.display='none'" />
+                            <div class="restaurant-info">
+                                <h6>Food Zone</h6>
+                                <div class="restaurant-meta">
+                                    <span><svg aria-hidden="true" fill="#f5a623" width="14" height="14" viewBox="0 0 24 24">
+                                            <path d="M12 .587l3.668 7.43L23.6 9.75l-5.797 5.674L19.342 23 12 19.897 4.658 23l1.539-7.576L.4 9.75l7.932-1.735z" /></svg> 4.1</span>
+                                    <span><svg aria-hidden="true" fill="#6c757d" width="14" height="14" viewBox="0 0 24 24">
+                                            <path d="M12 7v5l4 2" /></svg>2.75 km</span>
+                                    <span><svg aria-hidden="true" fill="#7d7d7d" width="14" height="14" viewBox="0 0 24 24">
+                                            <path d="M5 20h14v-2H5v2zM4 7h1l1 11h12l1-11h1" /></svg>Min Order: $100</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="restaurant-card" role="button" tabindex="0" aria-label="Maha Food Bazaar restaurant card">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6350b9cc-0b09-4061-8c38-f963ef5cd3d5.png" alt="Rich bowl of soup and rice in a rustic vessel for Maha Food Bazaar restaurant" onerror="this.style.display='none'" />
+                            <div class="restaurant-info">
+                                <h6>Maha Food Bazaar</h6>
+                                <div class="restaurant-meta">
+                                    <span><svg aria-hidden="true" fill="#f5a623" width="14" height="14" viewBox="0 0 24 24">
+                                            <path d="M12 .587l3.668 7.43L23.6 9.75l-5.797 5.674L19.342 23 12 19.897 4.658 23l1.539-7.576L.4 9.75l7.932-1.735z" /></svg> 4.1</span>
+                                    <span><svg aria-hidden="true" fill="#6c757d" width="14" height="14" viewBox="0 0 24 24">
+                                            <path d="M12 7v5l4 2" /></svg>2.75 km</span>
+                                    <span><svg aria-hidden="true" fill="#7d7d7d" width="14" height="14" viewBox="0 0 24 24">
+                                            <path d="M5 20h14v-2H5v2zM4 7h1l1 11h12l1-11h1" /></svg>Min Order: $100</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="restaurant-card" role="button" tabindex="0" aria-label="Superior burger restaurant card">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3df4d2f4-554a-4296-b451-5d43a3d0c3d7.png" alt="Superior burger with double beef patties, lettuce, tomato and cheese on a white plate" onerror="this.style.display='none'" />
+                            <div class="restaurant-info">
+                                <h6>Superior burger</h6>
+                                <div class="restaurant-meta">
+                                    <span><svg aria-hidden="true" fill="#f5a623" width="14" height="14" viewBox="0 0 24 24">
+                                            <path d="M12 .587l3.668 7.43L23.6 9.75l-5.797 5.674L19.342 23 12 19.897 4.658 23l1.539-7.576L.4 9.75l7.932-1.735z" /></svg> 4.1</span>
+                                    <span><svg aria-hidden="true" fill="#6c757d" width="14" height="14" viewBox="0 0 24 24">
+                                            <path d="M12 7v5l4 2" /></svg>2.75 km</span>
+                                    <span><svg aria-hidden="true" fill="#7d7d7d" width="14" height="14" viewBox="0 0 24 24">
+                                            <path d="M5 20h14v-2H5v2zM4 7h1l1 11h12l1-11h1" /></svg>Min Order: $100</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="restaurant-card" role="button" tabindex="0" aria-label="Albertsons restaurant card">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7550544e-3bcc-4f97-b811-f3ef8679c7c8.png" alt="Cheeseburger with lettuce, tomato and special sauce on a wooden table" onerror="this.style.display='none'" />
+                            <div class="restaurant-info">
+                                <h6>Albertsons</h6>
+                                <div class="restaurant-meta">
+                                    <span><svg aria-hidden="true" fill="#f5a623" width="14" height="14" viewBox="0 0 24 24">
+                                            <path d="M12 .587l3.668 7.43L23.6 9.75l-5.797 5.674L19.342 23 12 19.897 4.658 23l1.539-7.576L.4 9.75l7.932-1.735z" /></svg> 4.1</span>
+                                    <span><svg aria-hidden="true" fill="#6c757d" width="14" height="14" viewBox="0 0 24 24">
+                                            <path d="M12 7v5l4 2" /></svg>2.75 km</span>
+                                    <span><svg aria-hidden="true" fill="#7d7d7d" width="14" height="14" viewBox="0 0 24 24">
+                                            <path d="M5 20h14v-2H5v2zM4 7h1l1 11h12l1-11h1" /></svg>Min Order: $100</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="restaurant-card" role="button" tabindex="0" aria-label="Gelson's restaurant card">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/64879f5e-a6d0-4ca9-b10c-f6bb36064625.png" alt="Image of salad dish with variety of fresh sliced vegetables in white bowl" onerror="this.style.display='none'" />
+                            <div class="restaurant-info">
+                                <h6>Gelson's</h6>
+                                <div class="restaurant-meta">
+                                    <span><svg aria-hidden="true" fill="#f5a623" width="14" height="14" viewBox="0 0 24 24">
+                                            <path d="M12 .587l3.668 7.43L23.6 9.75l-5.797 5.674L19.342 23 12 19.897 4.658 23l1.539-7.576L.4 9.75l7.932-1.735z" /></svg> 4.1</span>
+                                    <span><svg aria-hidden="true" fill="#6c757d" width="14" height="14" viewBox="0 0 24 24">
+                                            <path d="M12 7v5l4 2" /></svg>2.75 km</span>
+                                    <span><svg aria-hidden="true" fill="#7d7d7d" width="14" height="14" viewBox="0 0 24 24">
+                                            <path d="M5 20h14v-2H5v2zM4 7h1l1 11h12l1-11h1" /></svg>Min Order: $100</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="restaurant-card" role="button" tabindex="0" aria-label="Mint Fresh restaurant card">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e7e28ec6-e82a-465f-a70f-412ce747f0c3.png" alt="Fresh healthy food bowl with greens, tomatoes and avocado in a white bowl" onerror="this.style.display='none'" />
+                            <div class="restaurant-info">
+                                <h6>Mint Fresh</h6>
+                                <div class="restaurant-meta">
+                                    <span><svg aria-hidden="true" fill="#f5a623" width="14" height="14" viewBox="0 0 24 24">
+                                            <path d="M12 .587l3.668 7.43L23.6 9.75l-5.797 5.674L19.342 23 12 19.897 4.658 23l1.539-7.576L.4 9.75l7.932-1.735z" /></svg> 4.1</span>
+                                    <span><svg aria-hidden="true" fill="#6c757d" width="14" height="14" viewBox="0 0 24 24">
+                                            <path d="M12 7v5l4 2" /></svg>2.75 km</span>
+                                    <span><svg aria-hidden="true" fill="#7d7d7d" width="14" height="14" viewBox="0 0 24 24">
+                                            <path d="M5 20h14v-2H5v2zM4 7h1l1 11h12l1-11h1" /></svg>Min Order: $100</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+    <section class="mobile-mockup" aria-label="Mobile Restaurant Delivery">
+        <header class="mobile-header">
+            Hello Javier <span style="font-weight: bold; color: plum;">Ponna</span> </header>
+        <div style="display: absolute; text-align: right;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z" />
+                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" /></svg></div>
+        <small>Praça Seca, Brazil <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" /></svg></small>
+        <br><br>
+        <div class="search-cuisines position-relative">
+            <input type="text" class="form-control" placeholder="Search for cuisines..." aria-label="Search Cuisines" />
+            <svg class="input-icon position-absolute top-50 translate-middle-y" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#bbb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="left:12px;">
+                <circle cx="11" cy="11" r="7" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+        </div>
+        <br>
+        <div class="mobile-icons" role="list" aria-label="Main categories">
+            <div class="circle-icon" role="listitem" tabindex="0" aria-label="Hamburgers category">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2b12666f-b20c-45ba-9b38-48da32c9130c.png" alt="Icon of a hamburger inside a circular shape with subtle shadow" onerror="this.style.display='none'" />
+                <span>Hamburgers</span>
+            </div>
+            <div class="circle-icon" role="listitem" tabindex="0" aria-label="Pizza category">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2be2bf34-5c15-4246-af67-990a2d9653ea.png" alt="Icon of a pizza slice inside a circular shape with subtle shadow" onerror="this.style.display='none'" />
+                <span>Pizza</span>
+            </div>
+            <div class="circle-icon" role="listitem" tabindex="0" aria-label="Sandwiches category">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c5cb1b7b-96fd-4b18-afe3-856e7dca6aa2.png" alt="Icon of a sandwich inside a circular shape with subtle shadow" onerror="this.style.display='none'" />
+                <span>Sandwiches</span>
+            </div>
+            <div class="circle-icon" role="listitem" tabindex="0" aria-label="Italian category">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0e498101-c276-434b-aa3d-114bdfe5b0b2.png" alt="Icon of pasta inside a circular shape with subtle shadow" onerror="this.style.display='none'" />
+                <span>Italian</span>
+            </div>
+        </div>
+        <div class="mobile-gallery" role="list" aria-label="Promotional banners">
+            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt=" Promotional banner with text 'Dineout Lucknow 50% Off' in red and yellow theme" role="listitem" />
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Promotional banner for GIRF Festival with red and white theme and text 'GIRF Festival'" role="listitem" />
+            <img src="https://plus.unsplash.com/premium_photo-1663852297267-827c73e7529e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Promotional banner with large text '50% Discount Offer' in red" role="listitem" />
+            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt=" Promotional banner with text 'Dineout Lucknow 50% Off' in red and yellow theme" role="listitem" />
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Promotional banner for GIRF Festival with red and white theme and text 'GIRF Festival'" role="listitem" />
+            <img src="https://plus.unsplash.com/premium_photo-1663852297267-827c73e7529e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Promotional banner with large text '50% Discount Offer' in red" role="listitem" />
+
+        </div>
+        <section class="mobile-favorites" aria-label="Favorites for Javier">
+            <h6>Favourites for Javier</h6>
+            <div class="favorite-item" role="button" tabindex="0" aria-label="Calicut Paragon favorite restaurant">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8a1b9508-4779-4873-b66f-de0095e7dc29.png" alt="Image of Calicut Paragon restaurant favorite food, rich spicy dish with color contrast" />
+                <div class="favorite-info">
+                    <h6>Calicut Paragon</h6>
+                    <div class="favorite-meta">
+                        <span>⭐ 5.0</span>
+                        <span>1.5 km</span>
+                        <span>Min order: $299</span>
+                    </div>
+                </div>
+            </div>
+            <div class="favorite-item" role="button" tabindex="0" aria-label="Beijing Bites favorite restaurant">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9a0af8e0-4b10-429c-a9be-0c6b845c7e19.png" alt="Image of Beijing Bites restaurant favorite dish, appetizing Chinese cuisine plate" />
+                <div class="favorite-info">
+                    <h6>Beijing Bites</h6>
+                    <div class="favorite-meta">
+                        <span>⭐ 5.0</span>
+                        <span>1.8 km</span>
+                        <span>Min order: $299</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
