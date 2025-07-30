@@ -417,6 +417,63 @@ body {
         object-fit: cover;
         box-shadow: 0 0 12px rgb(0 0 0 / 0.1);
     }
+     .circle-icon img {
+    max-width: 50px;
+    max-height: 50px;
+    margin: auto;
+  }
+  .circle-icon span {
+    font-size: 0.8rem;
+  }
+    .hamburger-wrapper {
+      max-width: 220px;
+    }
 
+    .hamburger-menu {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      background-color: white;
+      padding: 1.25rem;
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: -1px -1px 15px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      color: #222;
+    }
+
+    .menu-toggle:checked ~ .hamburger-menu {
+      display: flex;
+      animation: slideDown 0.3s ease-out;
+    }
+
+    .menu-label {
+      font-size: 1.5rem;
+      cursor: pointer;
+      background-color: #2a62ff;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+      margin: auto; 
+    }
+
+    .menu-label:hover {
+      background-color: #1a52ef;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
 }

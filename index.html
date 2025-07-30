@@ -84,11 +84,23 @@
                 <nav class="breadcrumb-custom" aria-label="breadcrumb">
                     Home / <a href="#" aria-current="page">Restaurants</a>
                 </nav>
-                <div class="row col-lg-20 mb-4 justify-content-end text-end">
+                <div class="row col-lg-20 mb-4 justify-content-end text-end d-none d-lg-flex">
                     <div class="col-auto" style="font-weight: bold;">Cost</div>
                     <div class="col-auto" style="font-weight: bold;">Rating</div>
                     <div class="col-auto" style="font-weight: bold;">Cost Per Person</div>
                     <div class=" col-auto" style="font-weight: bold;">Order Type</div>
+                </div>
+
+                <div class="d-lg-none">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-filters" aria-controls="mobile-filters" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse" id="mobile-filters">
+                        <div class="col-auto" style="font-weight: bold;">Cost</div>
+                        <div class="col-auto" style="font-weight: bold;">Rating</div>
+                        <div class="col-auto" style="font-weight: bold;">Cost Per Person</div>
+                        <div class=" col-auto" style="font-weight: bold;">Order Type</div>
+                    </div>
                 </div>
 
 
@@ -239,6 +251,20 @@
         <small>Praça Seca, Brazil <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" /></svg></small>
         <br><br>
+        <input type="checkbox" id="menu-toggle" class="d-none menu-toggle">
+  <label for="menu-toggle" class="menu-label">☰ </label>
+
+
+  <div class="hamburger-menu ">
+    <a href="#" class="text-decoration-none" style="color: black; background-color: #f2f2f2; border-radius: 8px; border: 2px solid #000000;">Cost</a>
+    <a href="#" class="text-decoration-none" style="color: black; background-color: #f2f2f2; border-radius: 8px; border: 2px solid #000000;">Rating</a>
+    <a href="#" class="text-decoration-none" style="color: black; background-color: #f2f2f2; border-radius: 8px; border: 2px solid #000000;">Cost Per Person</a>
+    <a href="#" class="text-decoration-none" style="color: black; background-color: #f2f2f2;  border-radius: 8px; border: 2px solid #000000;">Order Type</a>
+
+  </div>
+        <br>
+        <br>
+
         <div class="search-cuisines position-relative">
             <input type="text" class="form-control" placeholder="Search for cuisines..." aria-label="Search Cuisines" />
             <svg class="input-icon position-absolute top-50 translate-middle-y" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#bbb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="left:12px;">
@@ -246,58 +272,160 @@
                 <line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
         </div>
         <br>
-        <div class="mobile-icons" role="list" aria-label="Main categories">
-            <div class="circle-icon" role="listitem" tabindex="0" aria-label="Hamburgers category">
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2b12666f-b20c-45ba-9b38-48da32c9130c.png" alt="Icon of a hamburger inside a circular shape with subtle shadow" onerror="this.style.display='none'" />
-                <span>Hamburgers</span>
+<div id="categoryCarousel" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#categoryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#categoryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <div class="row justify-content-center py-3">
+                <div class="col-3 text-center">
+                    <div class="circle-icon" role="listitem" tabindex="0" aria-label="Hamburgers category">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2b12666f-b20c-45ba-9b38-48da32c9130c.png" class="d-block w-100 rounded-circle" alt="Icon of a hamburger inside a circular shape with subtle shadow" />
+                        <span class="mt-2 d-block">Hamburgers</span>
+                    </div>
+                </div>
+                <div class="col-3 text-center">
+                    <div class="circle-icon" role="listitem" tabindex="0" aria-label="Pizza category">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2be2bf34-5c15-4246-af67-990a2d9653ea.png" class="d-block w-100 rounded-circle" alt="Icon of a pizza slice inside a circular shape with subtle shadow" />
+                        <span class="mt-2 d-block">Pizza</span>
+                    </div>
+                </div>
+                <div class="col-3 text-center">
+                    <div class="circle-icon" role="listitem" tabindex="0" aria-label="Sandwiches category">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c5cb1b7b-96fd-4b18-afe3-856e7dca6aa2.png" class="d-block w-100 rounded-circle" alt="Icon of a sandwich inside a circular shape with subtle shadow" />
+                        <span class="mt-2 d-block">Sandwiches</span>
+                    </div>
+                </div>
+                <div class="col-3 text-center">
+                    <div class="circle-icon" role="listitem" tabindex="0" aria-label="Italian category">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0e498101-c276-434b-aa3d-114bdfe5b0b2.png" class="d-block w-100 rounded-circle" alt="Icon of pasta inside a circular shape with subtle shadow" />
+                        <span class="mt-2 d-block">Italian</span>
+                    </div>
+                </div>
             </div>
-            <div class="circle-icon" role="listitem" tabindex="0" aria-label="Pizza category">
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2be2bf34-5c15-4246-af67-990a2d9653ea.png" alt="Icon of a pizza slice inside a circular shape with subtle shadow" onerror="this.style.display='none'" />
-                <span>Pizza</span>
+        </div>
+
+
+        <div class="carousel-item">
+            <div class="row justify-content-center py-3">
+                <div class="col-3 text-center">
+                    <div class="circle-icon" role="listitem" tabindex="0" aria-label="Chinese category">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2b12666f-b20c-45ba-9b38-48da32c9130c.png" class="d-block w-100 rounded-circle" alt="Icon of Chinese food" />
+                        <span class="mt-2 d-block">Chinese</span>
+                    </div>
+                </div>
+                <div class="col-3 text-center">
+                    <div class="circle-icon" role="listitem" tabindex="0" aria-label="Mexican category">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2be2bf34-5c15-4246-af67-990a2d9653ea.png" class="d-block w-100 rounded-circle" alt="Icon of Mexican food" />
+                        <span class="mt-2 d-block">Mexican</span>
+                    </div>
+                </div>
+                <div class="col-3 text-center">
+                    <div class="circle-icon" role="listitem" tabindex="0" aria-label="Indian category">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c5cb1b7b-96fd-4b18-afe3-856e7dca6aa2.png" class="d-block w-100 rounded-circle" alt="Icon of Indian food" />
+                        <span class="mt-2 d-block">Indian</span>
+                    </div>
+                </div>
+                <div class="col-3 text-center">
+                    <div class="circle-icon" role="listitem" tabindex="0" aria-label="Japanese category">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0e498101-c276-434b-aa3d-114bdfe5b0b2.png" class="d-block w-100 rounded-circle" alt="Icon of Japanese food" />
+                        <span class="mt-2 d-block">Japanese</span>
+                    </div>
+                </div>
             </div>
-            <div class="circle-icon" role="listitem" tabindex="0" aria-label="Sandwiches category">
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c5cb1b7b-96fd-4b18-afe3-856e7dca6aa2.png" alt="Icon of a sandwich inside a circular shape with subtle shadow" onerror="this.style.display='none'" />
-                <span>Sandwiches</span>
-            </div>
-            <div class="circle-icon" role="listitem" tabindex="0" aria-label="Italian category">
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0e498101-c276-434b-aa3d-114bdfe5b0b2.png" alt="Icon of pasta inside a circular shape with subtle shadow" onerror="this.style.display='none'" />
-                <span>Italian</span>
-            </div>
+        </div>
+    </div>
+    
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#categoryCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden"><</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#categoryCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">></span>
+    </button>
+</div>
         </div>
         <div class="mobile-gallery" role="list" aria-label="Promotional banners">
-            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt=" Promotional banner with text 'Dineout Lucknow 50% Off' in red and yellow theme" role="listitem" />
-            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Promotional banner for GIRF Festival with red and white theme and text 'GIRF Festival'" role="listitem" />
-            <img src="https://plus.unsplash.com/premium_photo-1663852297267-827c73e7529e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Promotional banner with large text '50% Discount Offer' in red" role="listitem" />
-            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt=" Promotional banner with text 'Dineout Lucknow 50% Off' in red and yellow theme" role="listitem" />
-            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Promotional banner for GIRF Festival with red and white theme and text 'GIRF Festival'" role="listitem" />
-            <img src="https://plus.unsplash.com/premium_photo-1663852297267-827c73e7529e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Promotional banner with large text '50% Discount Offer' in red" role="listitem" />
+              <div class="row g-3 mb-4">
+
+                        <div class="offer-card">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/79812a1f-72ed-408f-a373-429867e1918f.png" alt="Plate with spicy Thai salad containing lettuce, red chili slices, and peanuts on a dark rustic wooden background" onerror="this.style.display='none'" />
+                            <div class="offer-text">50% off</div>
+                            <div class="offer-badge">OFFER</div>
+
+
+                            <div class="offer-subtext">Exclusive Offer On All Cuisines<br />ALBERTSONS</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="offer-card">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c5f8660b-e0a9-4057-a2d7-8fe8db2b01d0.png" alt="Bowl of Asian noodles with bean sprouts, herbs, and chopsticks on a dark textured surface" onerror="this.style.display='none'" />
+
+                            <div class="offer-text">50% off</div>
+                            <div class="offer-badge">OFFER</div>
+                            <div class="offer-subtext">Exclusive Offer On All Cuisines<br />ALBERTSONS</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+
+
+                        <div class="offer-card">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8efe75c9-f180-4308-81b3-d7be70c90e71.png" alt="Rice bowl topped with grilled chicken, herbs, and vegetables on a wooden board" onerror="this.style.display='none'" />
+
+                            <div class="offer-text">50% off</div>
+                            <div class="offer-badge">OFFER</div>
+                            <div class="offer-subtext">Exclusive Offer On All Cuisines<br />ALBERTSONS</div>
+                        </div>
+                    </div>
+                </div>
 
         </div>
-        <section class="mobile-favorites" aria-label="Favorites for Javier">
-            <h6>Favourites for Javier</h6>
-            <div class="favorite-item" role="button" tabindex="0" aria-label="Calicut Paragon favorite restaurant">
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8a1b9508-4779-4873-b66f-de0095e7dc29.png" alt="Image of Calicut Paragon restaurant favorite food, rich spicy dish with color contrast" />
-                <div class="favorite-info">
-                    <h6>Calicut Paragon</h6>
-                    <div class="favorite-meta">
-                        <span>⭐ 5.0</span>
-                        <span>1.5 km</span>
-                        <span>Min order: $299</span>
-                    </div>
-                </div>
-            </div>
-            <div class="favorite-item" role="button" tabindex="0" aria-label="Beijing Bites favorite restaurant">
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9a0af8e0-4b10-429c-a9be-0c6b845c7e19.png" alt="Image of Beijing Bites restaurant favorite dish, appetizing Chinese cuisine plate" />
-                <div class="favorite-info">
-                    <h6>Beijing Bites</h6>
-                    <div class="favorite-meta">
-                        <span>⭐ 5.0</span>
-                        <span>1.8 km</span>
-                        <span>Min order: $299</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+       <section class="mobile-favorites" aria-label="Favorites for Javier">
+  <h6>Favourites for Javier</h6>
+  <div class="favorite-item" role="button" tabindex="0" aria-label="Calicut Paragon favorite restaurant">
+    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8a1b9508-4779-4873-b66f-de0095e7dc29.png" alt="Image of Calicut Paragon restaurant favorite food, rich spicy dish with color contrast" />
+    <div class="favorite-info">
+      <h6>Calicut Paragon</h6>
+      <div class="favorite-meta">
+        <span>⭐ 5.0</span>
+        <span>1.5 km</span>
+        <span>Min order: $299</span>
+      </div>
+    </div>
+  </div>
+  <div class="favorite-item" role="button" tabindex="0" aria-label="Beijing Bites favorite restaurant">
+    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9a0af8e0-4b10-429c-a9be-0c6b845c7e19.png" alt="Image of Beijing Bites restaurant favorite dish, appetizing Chinese cuisine plate" />
+    <div class="favorite-info">
+      <h6>Beijing Bites</h6>
+      <div class="favorite-meta">
+        <span>⭐ 5.0</span>
+        <span>1.8 km</span>
+        <span>Min order: $299</span>
+      </div>
+    </div>
+  </div>
+  
+ 
+  </div>
+  <div class="favorite-item" role="button" tabindex="0" aria-label="Taco Fiesta favorite restaurant">
+    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=500&q=60" alt="Image of crunchy tacos with colorful fillings" />
+    <div class="favorite-info">
+      <h6>Taco Fiesta</h6>
+      <div class="favorite-meta">
+        <span>⭐ 4.6</span>
+        <span>1.9 km</span>
+        <span>Min order: $229</span>
+      </div>
+    </div>
+  </div>
+</section>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
