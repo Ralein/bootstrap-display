@@ -214,8 +214,7 @@ body {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    height: 200px;
-    width: 300px;
+    height: 160px;
     color: white;
     box-shadow: 0 3px 12px rgb(0 0 0 / 0.12);
 }
@@ -426,7 +425,7 @@ body {
   .circle-icon span {
     font-size: 0.8rem;
   }
-.hamburger-wrapper {
+  .hamburger-wrapper {
   display: flex;
   flex-direction: column;
 
