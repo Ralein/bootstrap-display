@@ -442,9 +442,9 @@ body {
   padding: 1.25rem;
   border-radius: 10px;
   margin-top: 10px;
-  min-width: 350px;
+  min-width: 320px;
   width: 100%; 
-  max-width: 360px; 
+  max-width: 340px; 
   box-shadow: -1px -1px 15px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   color: #222;
