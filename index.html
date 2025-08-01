@@ -253,15 +253,21 @@
                 <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" /></svg></small>
         <br><br>
 
-  <div class="hamburger-wrapper">
-  <input type="checkbox" id="menu-toggle" class="menu-toggle" hidden>
-  <label for="menu-toggle" class="menu-label">☰</label>
+<div class="hamburger-wrapper">
+  <button class="hamburger-button" aria-expanded="false" aria-controls="hamburger-menu">
+    <span class="hamburger-icon">☰</span>
+    <span class="visually-hidden">Toggle menu</span>
+  </button>
 
-  <div class="hamburger-menu">
-    <a href="#" class="menu-item">Cost</a>
-    <a href="#" class="menu-item">Rating</a>
-    <a href="#" class="menu-item">Cost Per Person</a>
-    <a href="#" class="menu-item">Order Type</a>
+  <div id="hamburger-menu" class="hamburger-menu" hidden>
+    <nav>
+      <ul class="menu-list">
+        <li><a href="#" class="menu-item">Cost</a></li>
+        <li><a href="#" class="menu-item">Rating</a></li>
+        <li><a href="#" class="menu-item">Cost Per Person</a></li>
+        <li><a href="#" class="menu-item">Order Type</a></li>
+      </ul>
+    </nav>
   </div>
 </div>
         <br>
