@@ -214,7 +214,8 @@ body {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    height: 160px;
+    height: 200px;
+    width: 300px;
     color: white;
     box-shadow: 0 3px 12px rgb(0 0 0 / 0.12);
 }
@@ -425,55 +426,76 @@ body {
   .circle-icon span {
     font-size: 0.8rem;
   }
-    .hamburger-wrapper {
-      max-width: 220px;
-    }
+.hamburger-wrapper {
+  display: flex;
+  flex-direction: column;
 
-    .hamburger-menu {
-      display: none;
-      flex-direction: column;
-      gap: 10px;
-      background-color: white;
-      padding: 1.25rem;
-      border-radius: 10px;
-      margin-top: 10px;
-      box-shadow: -1px -1px 15px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s ease;
-      color: #222;
-    }
+  align-items:flex-end;
+  
+  margin-right: 20px;
+}
 
-    .menu-toggle:checked ~ .hamburger-menu {
-      display: flex;
-      animation: slideDown 0.3s ease-out;
-    }
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white; 
+  padding: 1.25rem;
+  border-radius: 10px;
+  margin-top: 10px;
+  min-width: 350px;
+  width: 100%; 
+  max-width: 360px; 
+  box-shadow: -1px -1px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  color: #222;
+}
 
-    .menu-label {
-      font-size: 1.5rem;
-      cursor: pointer;
-      background-color: #2a62ff;
-      color: white;
-      padding: 2px 8px;
-      border-radius: 8px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: background-color 0.3s ease;
-      margin: auto; 
-    }
+.menu-toggle:checked ~ .hamburger-menu {
+  display: flex;
+  animation: slideDown 0.3s ease-out;
+}
 
-    .menu-label:hover {
-      background-color: #1a52ef;
-    }
+.menu-label {
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: #2a62ff;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
 
-    @keyframes slideDown {
-      from {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+.menu-label:hover {
+  background-color: #1a52ef;
+}
 
+/* Menu item hover styles */
+.menu-item {
+  text-decoration: none;
+  color: black;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 2px solid #000000;
+  padding: 8px 12px;
+  transition: background-color 0.2s ease;
+}
+
+.menu-item:hover {
+  background-color: #e0e0e0; /* Gray hover */
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 }
